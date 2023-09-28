@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="whole">
+        <div class="col-1">
+            <div class="list">
+                <a  href="#p1" id="b1">Program 1</a>
+                <a  href="#p2" id="b2">Program 2</a>
+                <a  href="#p3" id="b3">Program 3</a>
+                <a  href="#p4" id="b4">Program 4</a>
+                <a  href="#p5" id="b5">Program 5</a>
+                <a  href="#p6" id="b6">Program 6</a>
+                <a  href="#p7" id="b7">Program 7</a>
+                <a  href="#p8" id="b8">Program 8</a>
+                <a  href="#p9" id="b9">Program 9</a>
+                <a  href="#p10" id="b10">Program 10</a>
+                <a  href="#p11" id="b11">Program 11</a>
+                <a  href="#p12" id="b12">Program 12</a>
+                <a  href="#p13" id="b13">Program 13</a>
+                <a  href="#p14" id="b14">Program 14</a>
+                <a  href="#p15" id="b15">Program 15</a>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="banner-content">
+                <div class="logo-blue">
+                    <h1>JSP</h1>
+                </div>
+    
+                <div class="banner-blue" id="changeme">
+                    <h1>JAVA SCRIPT PROGRAMS</h1>
+                </div>
+            </div>
+            
+
+            
+            <!-- <div class=" banner">
+                <h1>Java Script Programs</h1>
+            </div> -->
+
+            <!-- ------------------Program 1------------------- -->
+            <div class="container" id="p1">
+                <h2>String reverse</h2>
+                <label for="str1">Enter any string:</label> <br>
+                <input type="text" id="str1"> <br>
+                <p id="p1-res">RESULT</p>
+                <button type="submit" onclick="p1()">Submit</button>
+        
+                <script>
+                    function p1(){
+                        let t1=document.getElementById('str1').value;
+                        let r1='';
+                        for(i=(t1.length-1);i>=0;i--){
+                            r1=r1+t1[i];
+                        }
+                        document.getElementById('p1-res').innerHTML=r1;
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 2------------------- -->
+            <div class="container" id="p2">
+                <h2>Reverse each word in a sentence</h2>
+                <label for="str2">Enter any string:</label> <br>
+                <input type="text" id="str2"> <br>
+                <p id="p2-res">RESULT</p>
+                <button type="submit" onclick="p2()">Submit</button>
+
+                <script>
+                    function p2(){
+                        let t1=document.getElementById('str2').value;
+                        const t2=t1.split(" ");
+                        let t3='';
+                        let r1='';
+                        for(i=0;i<=t2.length-1;i++){
+                            t3=t2[i];
+                            for(j=(t3.length-1);j>=0;j--){
+                                r1=r1+t3[j];
+                            }
+                            r1=r1+" ";
+                        }
+                        document.getElementById('p2-res').innerHTML=r1;
+
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 3------------------- -->
+            <div class="container" id="p3">
+                <h2>Combine two arrays</h2>
+                <script>
+                    const a1=['a','b','c'];
+                    const a2=['x','y','z'];
+                    document.write(a1.concat(a2));
+                </script>
+            </div>
+
+            <!-- ------------------Program 4------------------- -->
+            <div class="container" id="p4">
+                <h2>Unique values in array</h2>
+                <script>
+                    const a3=[1,2,3,4,3,5,9,1,150,1981,147,174];
+                    const a4=[];
+                    let r1="";
+                    for(i=0;i<=(a3.length-1);i++){
+                        if(a4.includes(a3[i])){
+                            continue
+                        }
+                        else{
+                            r1=r1+a3[i]+",";
+                            a4.push(a3[i]);
+                        }
+                    }
+                    document.write(r1);
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 5------------------- -->
+            <div class="container" id="p5">
+                <h2>Sort array and print center value</h2>
+                <script>
+                    const a5=[11,24,53,3,563,2]
+                    const a6=a5.sort(function(a,b){return a-b});
+                    let x=a5.length/2;
+                    document.write(a6);
+                    document.write('<br>');
+                    if(a5.length%2==0){
+                        document.write(a6[x]);
+                    }
+                    else{
+                        document.write(a6[x-0.5]);
+                    }
+                    
+                </script>
+            </div>
+
+            <!-- ------------------Program 6------------------- -->
+            <div class="container" id="p6">
+                <h2>Increase or decrease the value using button</h2>
+                <label for="inp">Enter a number:</label> <br>
+                <input type="number" id="inp"> <br>
+                <p id="p6-res">RESULT</p>
+                <button id="incr" onclick="increase()">Increase</button>
+                <button id="decr" onclick="decrease()">Decrease</button>
+
+                <script>
+                    function increase(){
+                        let x=Number(document.getElementById('inp').value);
+                        document.getElementById('p6-res').innerHTML=x+1;
+                    }
+
+                    function decrease(){
+                        let x=Number(document.getElementById('inp').value);
+                        document.getElementById('p6-res').innerHTML=x-1;
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 7------------------- -->
+            <div class="container" id="p7">
+                <h2>String Palindrome</h2>
+                <label for="str-7">Enter a word:</label> <br>
+                <input type="text" id="str-7"> <br>
+                <p id="p7-res">RESULT</p>
+                <button type="submit" onclick="p7()">Submit</button>
+
+                <script>
+                    function p7(){
+                        let x=document.getElementById('str-7').value;
+                        let rev='';
+                        for(i=(x.length-1);i>=0;i--){
+                            rev=rev+x[i];
+                        }
+                        if(x==rev){
+                            document.getElementById('p7-res').innerHTML=x+" "+'is palindrome';
+                        }
+                        else{
+                            document.getElementById('p7-res').innerHTML=x+" "+'is not palindrome';
+                        }
+
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 8------------------- -->
+            <div class="container" id="p8">
+                <h2>No. of consonants & vowels in a word:</h2>
+                <label for="str-8">Enter a word:</label> <br>
+                <input type="text" id="str-8"> <br>
+                <p id="p8-res">RESULT</p>
+                <button type="submit" onclick="p8()">Submit</button>
+
+                <script>
+                    function p8(){
+                        let c=0;
+                        let v=0;
+                        let x=document.getElementById('str-8').value;
+                        const vowel=['a','e','i','o','u','A','E','I','O','U'];
+
+                        for(i=0;i<x.length;i++){
+                            if(vowel.includes(x[i])){
+                                v=v+1;
+                            }
+                            else{
+                                c=c+1;
+                            }
+                        }
+                        document.getElementById('p8-res').innerHTML="Vowels : "+v+"<br>"+"Consonants : "+c;
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 9------------------- -->
+            <div class="container" id="p9">
+                <h2>Calculator</h2>
+                <label for="inp-x">Input 1:</label>
+                <input type="number" id="inp-x"> <br>
+                <label for="inp-y">Input 2:</label>
+                <input type="number" id="inp-y"> <br>
+                <p id="p9-res">RESULT : </p>
+                <button onclick="ad()" type="button">+</button> 
+                <button onclick="su()" type="button">-</button> 
+                <button onclick="mu()" type="button">x</button> 
+                <button onclick="di()" type="button">/</button> 
+
+                <script>
+                    function ad(){
+                        let x=Number(document.getElementById('inp-x').value);
+                        let y=Number(document.getElementById('inp-y').value);
+                        document.getElementById('p9-res').innerHTML=x+y;
+                    }
+
+                    function su(){
+                        let x=Number(document.getElementById('inp-x').value);
+                        let y=Number(document.getElementById('inp-y').value);
+                        document.getElementById('p9-res').innerHTML=x-y;
+                    }
+
+                    function mu(){
+                        let x=Number(document.getElementById('inp-x').value);
+                        let y=Number(document.getElementById('inp-y').value);
+                        document.getElementById('p9-res').innerHTML=x*y;
+                    }
+
+                    function di(){
+                        let x=Number(document.getElementById('inp-x').value);
+                        let y=Number(document.getElementById('inp-y').value);
+                        document.getElementById('p9-res').innerHTML=x/y;
+                    }
+                </script>
+
+
+            </div>
+
+            <!-- ------------------Program 10------------------- -->
+            <div class="container" id="p10">
+                <h2>Rupees denomination</h2>
+                <label for="inp-p10">Enter the amount:</label> <br>
+                <input type="number" id="inp-p10"> <br>
+                <p id="p10-res">RESULT</p>
+                <button type="submit" onclick="p10()">Submit</button>
+
+                <script>
+                    function p10(){
+                        let x= Number(document.getElementById('inp-p10').value);
+                        let d500=d200=d100=d50=d20=d10=d5=d2=d1= 0;
+                        while(x>=0){
+                            if(x>=500){
+                                x=x-500;
+                                d500=d500+1;
+                            }
+                            else if(x>=200){
+                                x=x-200;
+                                d200=d200+1;
+                            }
+                            else if(x>=100){
+                                x=x-100;
+                                d100=d100+1;
+                            }
+                            else if(x>=50){
+                                x=x-50;
+                                d50=d50+1;
+                            }
+                            else if(x>=20){
+                                x=x-20;
+                                d20=d20+1;
+                            }
+                            else if(x>=10){
+                                x=x-10;
+                                d10=d10+1;
+                            }
+                            else if(x>=5){
+                                x=x-5;
+                                d5=d5+1;
+                            }
+                            else if(x>=2){
+                                x=x-2;
+                                d2=d2+1;
+                            }
+                            else if(x>=1){
+                                x=x-1;
+                                d1=d1+1
+                            }
+                            else{
+                                break;
+                            }
+                        }
+
+                        document.getElementById('p10-res').innerHTML="500 : "+d500+"<br>"+
+                        "200 : "+d200+"<br>"+
+                        "100 : "+d100+"<br>"+
+                        "50  : "+d50+"<br>"+
+                        "20  : "+d20+"<br>"+
+                        "10  : "+d10+"<br>"+
+                        "5   : "+d5+"<br>"+
+                        "2   : "+d2+"<br>"+
+                        "1   : "+d1;
+
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 11------------------- -->
+            <div class="container" id="p11">
+                <h2>Registration Page</h2>
+
+            </div>
+
+            <!-- ------------------Program 12------------------- -->
+            <div class="container" id="p12">
+                <h2>Swap two numbers without using third variable</h2>
+                <label for="p12-x">Enter X :</label> 
+                <input type="number" id="p12-x"> <br>
+                <label for="p12-y">Enter Y:</label> 
+                <input type="number" id="p12-y"> <br>
+                <p id="p12-res">RESULT</p>
+                <button type="submit" onclick="p12()">Submit</button>
+                <script>
+                    function p12(){
+                        let x= Number(document.getElementById("p12-x").value) ;
+                        let y= Number(document.getElementById("p12-y").value);
+                        x=x+y;
+                        y=x-y;
+                        x=x-y;
+                        document.getElementById('p12-res').innerHTML="X : "+x+"<br>"+"Y : "+y;
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 13------------------- -->
+            <div class="container" id="p13">
+                <h2>Array operations</h2>
+                <script>
+                    const a=[23,2,45,11,9,50,11,2,10];
+                    const b=[];
+                    let res="";
+                    for(i=0;i<=(a.length-1);i++){
+                        if(b.includes(a[i])){
+                            continue
+                        }
+                        else{
+                            res=res+a[i]+",";
+                            b.push(a[i]);
+                        }
+                    }
+                    document.write('Original array : '+a);
+                    document.write('<br>');
+                    document.write('Unique values : '+b);
+                    document.write('<br>');
+                    document.write('Sorted array : '+b.sort(function(x,y){return x-y}));
+                    document.write('<br>');
+                    let center=b.length/2;      
+                    if(b.length%2==0){
+                        document.write("Center value : "+b[center]);
+                        document.write('<br>');
+                    }
+                    else{
+                        document.write("Center value : "+b[center-0.5]);
+                        document.write('<br>');
+                    }
+
+                    center=Math.round(center);
+                    
+                    if(b.length%2==0){
+                        for(i=center;i<=b.length-1;i++){
+                            b[i]=b[i]+2;
+                        }
+                    }
+                    else{
+                        for(i=center-1;i<=b.length-1;i++){
+                            b[i]=b[i]+2;
+                        }
+                    }
+                    
+                    document.write('+2 for each value from center : '+b);
+                </script>
+            </div>
+
+            <!-- ------------------Program 14------------------- -->
+            <div class="container" id="p14">
+                <h2>Increasing or decreasing the input field length</h2>
+                <label for="p14-in">Enter the input</label> <br>
+                <input type="text" id="p14-in" oninput="p14()" size="1"> <br>
+
+                <script>
+                    function p14() {
+                        let text = document.getElementById("p14-in").value;
+                        let tl=text.length;
+                        if(tl>1){
+                            document.getElementById('p14-in').setAttribute("size",tl);
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 15------------------- -->
+            <div class="container" id="p15">
+                <h2>Anagram</h2>
+                <label for="str_a">Enter a word for A :</label> 
+                <input type="text" id="str_a"> <br>
+                <label for="str_b">Enter a word for B :</label> 
+                <input type="text" id="str_b"> <br>
+                <p id="p15-res" >RESULT</p>
+                <button onclick="p15()">Submit</button>
+
+                <script>
+                    function p15(){
+                        let sa=document.getElementById('str_a').value;
+                        let sb=document.getElementById('str_b').value;
+                        let x=sa.length;
+                        if(sa.length==sb.length){
+                            sa=sa.split("");
+                            sa=sa.sort();
+                            sa=sa.join("");
+
+                            sb=sb.split("");
+                            sb=sb.sort();
+                            sb=sb.join("");
+                            // document.getElementById('p15-res').innerHTML=sa+"<br>"+sb;
+                            if(sa==sb){
+                                document.getElementById('p15-res').innerHTML="True";
+                            }
+                            else{
+                                document.getElementById('p15-res').innerHTML="False";
+                            }
+                        }
+                        else{
+                            document.getElementById('p15-res').innerHTML="False";
+                        }
+                    }
+                </script>
+
+            </div>
+
+            <div class="col-3">
+                <div class="pages">
+                    <a href="#">&laquo;</a>
+                    <a href="#"  class="active">1</a>
+                    <a href="/js-programs/page-2.html">2</a>
+                    <a href="/js-programs/page-3.html">3</a>
+                    <a href="/js-programs/page-4.html">4</a>
+                    <a href="/js-programs/page-2.html">&raquo;</a>
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="whole">
+        <div class="col-1">
+            <div class="list">
+                <a href="#p31" id="b31">Program 31</a>
+                <a href="#p32" id="b32">Program 32</a>
+                <a href="#p33" id="b33">Program 33</a>
+                <a href="#p34" id="b34">Program 34</a>
+                <a href="#p35" id="b35">Program 35</a>
+                <a href="#p36" id="b36">Program 36</a>
+                <a href="#p37" id="b37">Program 37</a>
+                <a href="#p38" id="b38">Program 38</a>
+                <a href="#p39" id="b39">Program 39</a>
+                <a href="#p40" id="b40">Program 40</a>
+                <a href="#p41" id="b41">Program 41</a>
+                <a href="#p42" id="b42">Program 42</a>
+                <a href="#p43" id="b43">Program 43</a>
+                <a href="#p44" id="b44">Program 44</a>
+                <a href="#p45" id="b45">Program 45</a>
+
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class=" banner">
+                <h1>JAVA SCRIPT PROGRAMS</h1>
+            </div>
+            <!-- <div class=" banner">
+                <h1>Java Script Programs</h1>
+            </div> -->
+
+            <!-- ------------------Program 31------------------- -->
+            <div class="container" id='p31'>
+                <h2>Get the Dimensions of an Image</h2>
+                <img  id="img-1" src="https://transform.octanecdn.com/crop/700x650/https://dynamix-cdn.s3.amazonaws.com/jacobandcocom/jacobandcocom_980265894.jpg" alt="">
+                <p id="p31-res">RESULT</p>
+                <button onclick="p31()">Click</button>
+
+                <script>
+                    function p31(){
+                        let img=document.getElementById('img-1');
+                        let img_w =img.clientWidth;
+                        let img_h = img.clientHeight;
+                        document.getElementById("p31-res").innerHTML=" width x height ="+img_w+"x"+img_h;
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 32------------------- -->
+            <div class="container" id='p32'>
+                <h2>Remove All Whitespaces From a Text</h2>
+                <label for="str-32">Enter a string</label> <br>
+                <input type="text" id="str-32"> <br>
+                <p id="p32-res">RESULT</p>
+                <button type="submit" onclick="p32()">Submit</button>
+
+                <script>
+                    function p32(){
+                        let st=document.getElementById("str-32").value;
+                        let res='';
+                        res=st.split(" ");
+                        res=res.join("");
+                        document.getElementById("p32-res").innerHTML=res;
+                        
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 33------------------- -->
+            <div class="container" id='p33'>
+                <h2>Convert Date to Number</h2>
+                <p id="p33-res">RESULT</p>
+                <button type="submit" onclick="p33()">Click </button>
+
+                <script>
+                    function p33(){
+                        let d= new Date();
+                        document.getElementById("p33-res").innerHTML=d.getTime();
+                    }
+                </script>
+            </div>
+    
+            <!-- ------------------Program 34------------------- -->
+            <div class="container" id='p34'>
+                <h2>Encode a String to Base64</h2>
+                <label for="str-34">Enter a string</label> <br>
+                <input type="text" id="str-34"> <br>
+                <p id="p34-res">RESULT</p>
+                <button type="submit" onclick="p34()">Submit</button>
+
+                <script>
+                    function p34(){
+                        let st=document.getElementById("str-34").value;
+                        let res='';
+                        res=btoa(st);
+                        document.getElementById("p34-res").innerHTML=res;
+                        
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 35------------------- -->
+            <div class="container" id='p35'>
+                <h2>Display section when a positive radio button selected</h2>
+                <div>
+                    <input type="radio" id="posi" name="val" value="pos">
+                    <label for="positive">Positive</label> <br>
+                    <input type="radio" id="nega" name="val" value="neg">
+                    <label for="positive">Negative</label> <br>
+                    <button onclick="p35()">Click</button>
+                </div>
+                <img  style="display: none;" id="img-2" src="https://transform.octanecdn.com/crop/700x650/https://dynamix-cdn.s3.amazonaws.com/jacobandcocom/jacobandcocom_980265894.jpg" alt="">
+
+                <script>
+                    function p35() {
+                        let radio1=document.getElementById("posi");
+                        let radio2=document.getElementById("nega");
+                        if(radio1.checked){
+                            document.getElementById("img-2").style='display: block';
+                        }
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 36------------------- -->
+            <div class="container" id='p36'>
+                <h2>Select min-2 options and max-5 option from given checkbox input</h2>
+                <div class="check">
+                    <input type="checkbox" id="vehicle1" name="vehicle" value="bike">
+                    <label for="vehicle1"> I have a bike</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle" value="car">
+                    <label for="vehicle2"> I have a car</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle" value="boat">
+                    <label for="vehicle3"> I have a boat</label><br>
+                    <input type="checkbox" id="vehicle4" name="vehicle" value="jet">
+                    <label for="vehicle4"> I have a jet</label><br>
+                    <input type="checkbox" id="vehicle5" name="vehicle" value="truk">
+                    <label for="vehicle5"> I have a truk</label><br>
+                    <input type="checkbox" id="vehicle6" name="vehicle" value="helicopter">
+                    <label for="vehicle6"> I have a helicopter</label><br>
+                    <button id="c-btn">Submit</button>
+                    <p id="p36-res">RESULT</p>
+                </div>
+                
+                <script>
+                    const btn = document.querySelector('#c-btn');
+                    let value_len=0;
+                    btn.addEventListener('click', (event) => {
+                        let checkboxes = document.querySelectorAll('input[name="vehicle"]:checked');
+                        let values = [];
+                        checkboxes.forEach((checkbox) => {
+                            values.push(checkbox.value);
+                        });
+                        value_len=values.length;
+                        document.getElementById("p36-res").innerHTML=values;
+                        if((value_len<2) ||  (value_len>5)){
+                            document.getElementById("p36-res").innerHTML=
+                                'Please select <b>minimum 2</b> options and <b>maximum 5</b> option';
+                        }
+                        else{
+                            document.getElementById("p36-res").innerHTML="You have selected: "+values.join(" ");
+                            
+                        }
+                    });    
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 37------------------- -->
+            <div class="container" id='p37'>
+                <h2>DOB Validation check the user input to get age of above 18 and below 30 is valid</h2>
+                <label for="bday">Enter your birthday</label> <br>
+                <input type="date" id="bday">
+                <p id="p37-res">RESULT</p>
+                <button type="submit" onclick="p37()">Submit</button>
+
+
+                <script>
+                    function p37(){
+                        let bday=document.getElementById("bday").value;
+                        var dob=new Date(bday);
+                        var month_diff = Date.now() - dob.getTime();
+                        var age_d = new Date(month_diff);
+                        var year = age_d.getUTCFullYear();
+                        var cal_age = Math.abs(year - 1970);
+                        // document.getElementById("p37-res").innerHTML ="Calulated Age is: " + cal_age + "years.";
+                        if(cal_age>=18 && cal_age<=30){
+                            document.getElementById("p37-res").innerHTML ='Valid';
+                        }
+                        else{
+                            document.getElementById("p37-res").innerHTML ='Invalid'
+                        }
+
+                    }
+                </script>
+            </div>
+
+
+            <!-- ------------------Program 38------------------- -->
+            <div class="container" id='p38'>
+                <h2>Generate a Range of Numbers and Characters</h2>
+                <label for="inp-38">Enter the length:</label> <br>
+                <input type="number" id="inp-38"> <br>
+                <p id="p38-res">RESULT</p>
+                <button onclick="p38()">Submit</button>
+
+                <script>
+                    function p38(){
+                        len=Number(document.getElementById("inp-38").value) ;
+                        res='';
+                        let chars ='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                        let chars_len=chars.length;
+                        for(i=0;i<len;i++){
+                            res=res+chars.charAt(Math.floor(Math.random() *chars_len));
+                        }
+                        document.getElementById("p38-res").innerHTML=res;
+                    }
+                </script>
+            </div>
+
+    
+
+            <!-- ------------------Program 39------------------- -->
+            <div class="container" id='p39'>
+                <h2>Show a undefined and not defined of variable</h2>
+                <p id="p39-res">RESULT</p>
+                <p id="p39-1-res">RESULT</p>
+                <script>
+                    let xyx;
+                    let xyz={};
+                    document.getElementById("p39-res").innerHTML=xyx;
+                    document.getElementById("p39-1-res").innerHTML=xyz.notdef;
+                </script>
+            </div>
+
+            <!-- ------------------Program 40------------------- -->
+            <div class="container" id='p40'>
+                <h2>Stack implementation</h2>
+                <script>
+                    const stack=[5,4,3,2,1]
+                    document.write('Initial stack : '+stack +'<br>')
+                    document.write('<b>Push 6</b>' +'<br>')
+                    stack.unshift(6)
+                    document.write('Stack : '+stack +'<br>')
+                    document.write('<b>Push 7</b>' +'<br>')
+                    stack.unshift(7)
+                    document.write('Stack : '+stack +'<br>')
+                    document.write('<b>Pop once</b>' +'<br>')
+                    stack.shift()
+                    document.write('Stack : '+stack  +'<br>')
+                    document.write('<b>Pop again</b>'  +'<br>')
+                    stack.shift()
+                    document.write('Final Stack : '+stack)
+
+                </script>
+            </div>
+
+            <!-- ------------------Program 41------------------- -->
+            <div class="container" id='p41'>
+                <h2>Queue implementation</h2>
+
+                <script>
+                    const que=[1,2,3,4,5];
+                    document.write('Initial Queue : '+que +'<br>')
+                    document.write('<b>Enqueue 6</b>' +'<br>')
+                    que.push(6);
+                    document.write('Queue : '+que +'<br>')
+                    document.write('<b>Enqueue 7</b>' +'<br>')
+                    que.push(7);
+                    document.write('Queue : '+que +'<br>')
+                    document.write('<b>Dequeue once</b>' +'<br>')
+                    que.pop()
+                    document.write('Queue : '+que +'<br>')
+                    document.write('<b>Dequeue again</b>' +'<br>')
+                    que.pop()
+                    document.write('Queue : '+que +'<br>')
+                </script>
+            </div>
+
+            <!-- ------------------Program 42------------------- -->
+            <div class="container" id='p42'>
+                <h2>Generate series of numbers</h2>
+                <pre>
+                    With a single integer as the input
+                    Generate the following until a = x [series of numbers as shownbelow]
+
+                    Output: (examples)
+
+                    1 input a = 1, then output : 1
+
+                    2 input a = 2, then output : 1, 3
+
+                    3 input a = 3, then output : 1, 3, 5
+
+                    4 input a = 4, then output: 1, 3, 5, 7
+                </pre>
+                <label for="inp-42">Enter a number</label> <br>
+                <input type="number" id="inp-42"> <br>
+                <p id="p42-res">RESULT</p>
+                <button onclick="p42()">Submit</button>
+
+                <script>
+                    function p42(){
+                        const x_a=[];
+                        x=1;
+                        inp=Number(document.getElementById('inp-42').value);
+                        for(i=1;i<=inp;i++){
+                            x_a.push(x)
+                            x=x+2
+                        }
+                        document.getElementById('p42-res').innerHTML="output: " + x_a.join(", ");
+                    }
+                </script>
+            </div>
+
+
+            <!-- ------------------Program 43------------------- -->
+            <div class="container" id='p43'>
+                <h2>Generate series of numbers</h2>
+                <pre>
+                    With a single integer as the input
+                    Generate the following until a = x [series of numbers as shownbelow]
+
+                    Output: (examples)
+
+                    1 input a = 1, then output: 1
+
+                    2 input a = 2, then output: 1
+
+                    3 input a = 3, then output: 1, 3, 5
+
+                    4 input a = 4, then output: 1, 3, 5
+
+                    5 input a = 5, then output: 1, 3, 5, 7, 9
+
+                    6 input a = 6, then output: 1, 3, 5, 7, 9
+                </pre>
+                <label for="inp-43">Enter a number</label> <br>
+                <input type="number" id="inp-43"> <br>
+                <p id="p43-res">RESULT</p>
+                <button onclick="p43()">Submit</button>
+
+                <script>
+                    function p43(){
+                        const y_a=[];
+                        x=1;
+                        inp=Number(document.getElementById('inp-43').value);
+                        for(i=1;i<=inp;i++){
+                            if(i%2!=0){
+                                while(y_a.length!=i){
+                                    y_a.push(x)
+                                    x=x+2
+                                }
+                            }
+                            else{
+                                continue
+                            }
+                        }
+                        document.getElementById('p43-res').innerHTML="output: " + y_a.join(", ");
+                    }
+                </script>
+            </div>
+
+            <!-- ------------------Program 44------------------- -->
+            <div class="container" id='p44'> 
+                <h2>Calculator</h2>
+                <label for="inp-a">Input 1:</label> <br>
+                <input type="number" id="inp-a"> <br>
+                <label for="inp-b">Input 2:</label> <br>
+                <input type="number" id="inp-b"> <br>
+                <p> Select the operation:</p>
+                    <select id="inp-op">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="x">x</option>
+                        <option value="/">/</option>
+                    </select>
+                
+                <p id="p44-res">RESULT : </p>
+                <button type="submit" onclick="p44()">Submit</button>
+
+                <script>
+                    function p44(){
+                        let a=Number(document.getElementById('inp-a').value);
+                        let b=Number(document.getElementById('inp-b').value);
+                        // let op=String(document.getElementById('inp-op').value);
+
+                        let selectElement = document.querySelector('#inp-op');
+                        let output = String(selectElement.value);
+                        
+                        if(output=='+'){
+                            document.getElementById("p44-res").innerHTML=a+b;
+                        }
+                        else if(output=='-'){
+                            document.getElementById("p44-res").innerHTML=a-b;
+                        }
+                        else if(output=='x'){
+                            document.getElementById("p44-res").innerHTML=a*b;
+                        }
+                        else{
+                            document.getElementById("p44-res").innerHTML=a/b;
+                        }
+                    }
+                </script>
+
+            </div>
+
+            <!-- ------------------Program 45------------------- -->
+            <div class="container" id='p45'>
+                <h2>Total count of the number list in the dictionary which is a multiple of [1,2,3,4,5,6,7,8,9]</h2>
+
+                <script>
+                    const comp=[1,2,3,4,5,6,7,8,9];
+                    const l=[1,2,8,9,12,46,76,82,15,20,30]
+                    for(i=0;i<=comp.length-1;i++){
+                        x=comp[i];
+                        let c=0;
+                        for(j=0;j<=l.length-1;j++){
+                            if(l[j]%x==0){
+                                c=c+1;
+                            }
+                        }
+                        document.write(x+" "+c+"<br>")
+                    }
+
+                </script>
+
+            </div>
+
+            <div class="col-3">
+                <div class="pages">
+                    
+                    <a href="/js-programs/page-2.html">&laquo;</a>
+                    <a href="/js-programs/index.html">1</a>
+                    <a href="/js-programs/page-2.html">2</a>
+                    <a href="#" class="active">3</a>
+                    <a href="/js-programs/page-4.html">4</a>
+                    <a href="/js-programs/page-4.html">&raquo;</a>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

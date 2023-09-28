@@ -1,0 +1,273 @@
+
+/* .col-1{
+    width: 15%;
+    border: 2px solid blue;
+    float: left;
+    position: relative;
+} */
+.banner-content{
+    height: 170px;
+    width: 100%;
+}
+
+.banner-blue{
+    background-color: #2C3333;
+    border: 3px solid #279EFF ;
+    text-align: left;
+    width: 53.2%;
+    box-shadow: 10px 10px 20px  #279EFF ;
+    float: left;
+    margin-left: 10px;
+}
+
+.banner-blue h1{
+    color: #279EFF;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 40px;
+    text-shadow: 3px 3px 10px  #279EFF ;
+    font-family: 'CustomFont2', sans-serif;
+    padding-top: 30px;
+    height: 78px;
+}
+
+.banner-pink{
+    background-color: #2C3333;
+    border: 3px solid  #ffdddd ;
+    text-align: left;
+    width: 53.2%;
+    box-shadow: 10px 10px 20px #ffdddd ;
+    float: left;
+    margin-left: 10px;
+}
+
+.banner-pink h1{
+    color: #ffdddd;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 40px;
+    text-shadow: 3px 3px 10px  #ffdddd;
+    font-family: 'CustomFont2', sans-serif;
+    padding-top: 30px;
+    height: 78px;
+
+}
+
+.logo{
+    background-color: #2C3333;
+    border: 3px solid #279EFF ;
+    text-align: left;
+    margin-left: 24px;
+    box-shadow: 10px 10px 20px  #279EFF ;
+    float: left;
+}
+
+.logo h1{
+    color: #279EFF;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 60px;
+    text-shadow: 3px 3px 10px  #279EFF ;
+    font-family: 'CustomFont2', sans-serif;
+    letter-spacing: 5px;
+    padding-right: 18px;
+}
+
+
+.logo-blue{
+    background-color: #2C3333;
+    border: 3px solid #279EFF ;
+    text-align: left;
+    margin-left: 24px;
+    box-shadow: 10px 10px 20px  #279EFF ;
+    float: left;
+}
+
+.logo-blue h1{
+    color: #279EFF;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 60px;
+    text-shadow: 3px 3px 10px  #279EFF ;
+    font-family: 'CustomFont2', sans-serif;
+    letter-spacing: 5px;
+    padding-right: 18px;
+}
+
+.logo-pink{
+    background-color: #2C3333;
+    border: 3px solid #ffdddd ;
+    text-align: left;
+    margin-left: 24px;
+    box-shadow: 10px 10px 20px  #ffdddd ;
+    float: left;
+}
+
+.logo-pink h1{
+    color: #ffdddd;
+    text-shadow: none;
+    text-decoration: none;
+    font-size: 60px;
+    text-shadow: 3px 3px 10px  #ffdddd ;
+    font-family: 'CustomFont2', sans-serif;
+    letter-spacing: 5px;
+    padding-right: 18px;
+}
+
+#p1{
+   clear: both;
+}
+.col-2{
+    width: 84%;
+    /* border: 2px solid rebeccapurple; */
+    float: right;
+}
+
+.col-3{
+    width: 100%;
+    height: 150px;
+    /* border: #279EFF solid 2px; */
+    clear: both;
+}
+
+.list a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-collapse: collapse;
+    padding: 15px 80px;
+}
+
+.list a:last-child{
+    border-bottom: 3px solid black;
+}
+
+.list{
+    position: fixed;
+    padding-top: 5px;
+    top: 0;
+    
+}
+
+.list a.active {
+    background-color: #2C3333;
+    color:#279EFF !important  ;
+    border: 1px solid #279EFF;
+    outline: 2px solid #279EFF ;
+}
+
+
+.pages {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+  
+.pages a {
+    color: black;
+    float: left;
+    padding: 8px 40px;
+    text-decoration: none;
+    border: solid 3px black;
+    font-size: 18px;
+    margin: 0 1px;
+}
+
+
+.active {
+    background-color: #279EFF;
+    color: white !important;
+}
+
+
+.pages a:hover {
+    background-color: #2C3333;
+    color: white;
+    /* border-color: #279EFF; */
+}
+
+
+
+@font-face {
+    font-family: 'CustomFont1';
+    src: url('fonts/Cfour.otf') format('opentype')
+    
+}
+
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('fonts/against\ regular.otf') format('opentype')
+
+}
+
+@font-face {
+    font-family: 'CustomFont3';
+    src: url('fonts/cessotest-regular.otf') format('opentype')
+
+}
+
+@font-face {
+    font-family: 'CustomFont4';
+    src: url('fonts/Gyahegi.ttf') format('truetype')
+
+}
+
+@font-face {
+    font-family: 'CustomFont5';
+    src: url('fonts/Acedian.otf') format('opentype')
+
+}
+
+.container{
+    width: 50%;
+    /* height: 200px; */
+    border: solid #2C3333 3px;
+    padding: 20px;
+    margin: 25px;
+    box-shadow: 10px 10px 20px  #9a9d9d ;
+}
+
+h2{
+    color: black;
+    text-shadow: 2px 2px 2px rgb(182, 181, 181);
+}
+h1{
+    text-shadow: 2px 2px 2px rgb(182, 181, 181);
+    padding-left: 30px;
+    text-decoration: underline;
+}
+
+input{
+    margin: 5px 0;
+    height: 20px;
+}
+
+button{
+    padding: 8px 16px;
+    color: white;
+    background-color: #2e2e2e;
+    border: solid 0.5px;
+}
+
+button:hover{
+    color: #2e2e2e;
+    background-color: white ;
+    border: solid 0.5px;
+    box-shadow: 5px 5px 10px  #9a9d9d;
+
+}
+
+table, td{
+    border: solid 2px;
+    border-collapse: collapse;
+}
+
+.heading h1{
+    text-decoration: none;
+    
+}
